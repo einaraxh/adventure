@@ -1,0 +1,49 @@
+body {
+    white-space: pre;
+
+    background-color: beige;
+
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.top {
+    border: 1px solid black;
+    height: 50px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.bottom {
+    border: 1px solid black;
+    height: 50px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.middle {
+    flex: 1;
+    display: flex;
+}
+
+.left {
+    border: 1px solid black;
+    flex: 1;
+    margin: 5px;
+    padding: 5px;
+}
+
+.right {
+    border: 1px solid black;
+    flex: 1;
+    margin: 5px;
+    padding: 5px;
+}
+
+.crew {
+    border: 1px solid black;
+    flex: 1;
+    margin: 5px;
+    padding: 5px;
+}

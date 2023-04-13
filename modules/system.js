@@ -1,5 +1,6 @@
-export function inner(str) {
-    document.getElementById("maindiv").innerHTML = str
+export function inner(str, div) {
+    document.getElementById(div).innerHTML = str
+    //document.getElementsByClassName(div).innerHTML = str
 }
 
 export function mod(n, m) {

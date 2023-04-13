@@ -12,10 +12,10 @@ export class Menu {
             let name = e.name
             ret += name
             for (let j = 0; j < this.space-name.length; j++) {
-                ret += "&nbsp"
+                ret += " "
             }
             if (i == mod(this.selector, this.items.length)) {
-                ret += "[+]"
+                ret += "<=="
             }
             ret += "<br>"
         })

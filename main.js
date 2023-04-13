@@ -1,6 +1,9 @@
 import { Adventurer } from "./modules/Adventurer.js"
 import { Menu } from "./modules/Menu.js"
 import { phase1 } from "./modules/phases.js"
+import { survivors } from "./modules/Adventurer.js"
+
+console.log(survivors)
 
 const maindiv = document.getElementById("maindiv")
 
@@ -10,10 +13,18 @@ export function inner(str) {
 
 //init
 let currentPhase = phase1
-let carl = new Adventurer("Carl", 200, 10)
-let bert = new Adventurer("Bert", 100, 35)
-let kent = new Adventurer("Kent", 100, 35)
-phase1.menu = new Menu([carl, bert, kent], 0, 8)
+
+let candidates = []
+
+for(let i = 0; i < 3; i++) {
+    candidates.push(randPick(survivors))
+}
+console.log(candidates)
+console.log(survivors)
+
+phase1.menu = new Menu(candidates, 0, 8)
+
+
 phase1.write()
 
 
@@ -26,3 +37,10 @@ document.addEventListener("keydown", function(event) {
     }
     currentPhase.write()
 })
+
+function randPick(list) {
+    const n = Math.floor(Math.random()*list.length)
+    const ret = list[n]
+    list.splice(n, 1)
+    return ret
+}
